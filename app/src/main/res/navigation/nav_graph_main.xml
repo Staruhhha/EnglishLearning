@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/auditionFragment">
+
+    <fragment
+        android:id="@+id/auditionFragment"
+        android:name="com.example.englishlearning.fragments.AuditionFragment"
+        android:label="Аудирование"
+        tools:layout="@layout/fragment_audition" >
+        <action
+            android:id="@+id/action_auditionFragment_to_auditionDetailFragment"
+            app:destination="@id/auditionDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/auditionDetailFragment"
+        android:name="com.example.englishlearning.fragments.AuditionDetailFragment"
+        android:label="Аудирование"
+        tools:layout="@layout/fragment_audition_detail">
+        <argument
+            android:name="idAud"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_auditionDetailFragment_to_auditionFragment"
+            app:destination="@id/auditionFragment"
+            app:enterAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.englishlearning.fragments.ProfileFragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/readingFragment"
+        android:name="com.example.englishlearning.fragments.ReadingFragment"
+        android:label="Чтение"
+        tools:layout="@layout/fragment_reading" >
+        <action
+            android:id="@+id/action_readingFragment_to_readingDetailFragment"
+            app:destination="@id/readingDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/readingDetailFragment"
+        android:name="com.example.englishlearning.fragments.ReadingDetailFragment"
+        android:label="Чтение"
+        tools:layout="@layout/fragment_reading_detail">
+        <action
+            android:id="@+id/action_readingDetailFragment_to_readingFragment"
+            app:destination="@id/readingFragment"
+            app:enterAnim="@anim/slide_out_left" />
+        <argument
+            android:name="idReading"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/translateFragment"
+        android:name="com.example.englishlearning.fragments.TranslateFragment"
+        android:label="TranslateFragment" />
+</navigation>

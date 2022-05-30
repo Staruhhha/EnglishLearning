@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/profileFragment"
+        android:title="@string/profile_menu"
+        android:icon="@drawable/ic_account"/>
+
+    <item android:id="@+id/auditionFragment"
+        android:title="@string/volume_menu_string"
+        android:icon="@drawable/ic_volume"
+        />
+
+    <item android:id="@+id/readingFragment"
+        android:title="@string/reading_menu"
+        android:icon="@drawable/ic_reading"/>
+
+    <item android:id="@+id/translateFragment"
+    android:title="@string/translate_menu"
+    android:icon="@drawable/ic_baseline_translate_24"/>
+
+</menu>

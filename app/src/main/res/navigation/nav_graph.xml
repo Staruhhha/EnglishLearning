@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registrationFirstStepFragment">
+
+    <fragment
+        android:id="@+id/registrationFirstStepFragment"
+        android:name="com.example.englishlearning.fragments.RegistrationFirstStepFragment"
+        android:label="Регистрация"
+        tools:layout="@layout/fragment_registration_first_step">
+        <action
+            android:id="@+id/action_registrationFirstStepFragment_to_registrationSecondStepFragment"
+            app:destination="@id/registrationSecondStepFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationSecondStepFragment"
+        android:name="com.example.englishlearning.fragments.RegistrationSecondStepFragment"
+        android:label="Регистрация"
+        tools:layout="@layout/fragment_registration_second_step" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="surname"
+            app:argType="string" />
+        <argument
+            android:name="levelId"
+            app:argType="string" />
+        <argument
+            android:name="testId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
